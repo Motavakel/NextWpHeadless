@@ -1,14 +1,24 @@
 # Next.JS with Wp Headless
 
+
+<p align="center">
+  <img src="screenshots/home.jpg" width="380" alt="home"/>
+  <img src="screenshots/blog.jpg" width="380" alt="blog"/>
+</p>
+
+
+<p align="justify">
 A high-performance, SEO-optimized e-commerce and content platform built with Next.js 15 (App Router) and a headless WordPress backend. This project leverages the power of WPGraphQL, the WooCommerce REST API, and modern React tooling to deliver a fast, flexible, and scalable frontend experience.
 
 ## Can WordPress Be Used as the Backend for Next.js?
 
+<p align="justify">
 Absolutely. This project is a production-ready demonstration of using WordPress as a headless CMS. WordPress exposes its data via:
 
 - **WPGraphQL** for posts, pages, categories, tags, and custom post types.
 - **WooCommerce REST API** for product catalogs, categories, tags, and e-commerce data.
 
+<p align="justify">
 Next.js consumes these endpoints and renders a fully static or server-side rendered frontend, decoupling content management from presentation. The result is a website that combines WordPress's familiar admin interface with Next.js's performance and developer experience.
 
 ## Key Features
