@@ -3,7 +3,7 @@
 
 <p align="center">
   <img src="screenshots/home.jpg" width="380" alt="home"/>
-  <img src="screenshots/blog.jpg" width="380" alt="blog"/>
+<!--   <img src="screenshots/blog.jpg" width="380" alt="blog"/> -->
 </p>
 
 
