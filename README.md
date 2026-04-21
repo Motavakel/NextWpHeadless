@@ -1,4 +1,4 @@
-# Next.JS with Wp Headless
+# Headless WordPress Next.js
 
 
 <p align="center">
