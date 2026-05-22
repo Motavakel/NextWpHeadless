@@ -45,6 +45,9 @@ MAXPHONE/
 ├── src/
 │   ├── assets/
 │   ├── app/
+|   |   ├── api/
+|   │   |   └── revalidate/
+|   │   |       └── route.ts 
 │   │   ├── (home)/
 │   │   │   ├── components/
 │   │   │   │   ├── Banner
