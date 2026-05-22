@@ -39,134 +39,71 @@ The project follows a scalable folder structure designed for maintainability and
 
 ```text
 MAXPHONE/
-├── .next/                      # Next.js build output
-├── node_modules/               # Dependencies
-├── public/                     # Static assets
+├── .next/
+├── node_modules/
+├── public/
 ├── src/
-│   ├── app/                    # Next.js App Router
-│   │   ├── (home)/             # Landing page route group
-│   │   │   ├── components/     # Home-specific components
-│   │   │   │   ├── Banner.tsx
-│   │   │   │   ├── BannerSlider.tsx
-│   │   │   │   ├── BrandSlider.tsx
-│   │   │   │   ├── CategoryGrid.tsx
-│   │   │   │   ├── HeroSlider.tsx
-│   │   │   │   └── SecondBrandSlider.tsx
-│   │   │   └── page.tsx        # Home page entry
-│   │   │
-│   │   ├── (post)/             # Blog route group
-│   │   │   └── blog/           
-│   │   │       └── [slug]/     # Single post dynamic route
-│   │   │           ├── components/
-│   │   │           │   ├── HeroPost.tsx
-│   │   │           │   ├── PostFooter.tsx
-│   │   │           │   └── Sidebar.tsx
-│   │   │           └── page.tsx
-│   │   │
-│   │   ├── shop/               # Shop listing page
-│   │   │    └── page.tsx   
-│   │   │
-│   │   ├── product-category/   # Category listing
-│   │   │      └── [slug]/
-│   │   │          └── page.tsx   
-│   │   │
-│   │   ├── product-tag/        # Tag listing
-│   │   │     └── [slug]/
-│   │   │         └── page.tsx   
-│   │   │       
-│   │   ├── product/            # Single Product
-│   │   │   └── [id]/
-│   │   │       ├── components/ 
-│   │   │       │   ├── FeaturesSection.tsx
-│   │   │       │   ├── ProductActions.tsx
-│   │   │       │   ├── ProductImageSlider.tsx
-│   │   │       │   ├── ProductInfo.tsx
-│   │   │       │   ├── ProductPurchaseInfo.tsx
-│   │   │       │   └── ProductTabsSection.tsx
-│   │   │       └── page.tsx
-│   │   │
-│   │   ├── about/              # About Us
+│   ├── assets/
+│   ├── app/
+│   │   ├── (home)/
 │   │   │   ├── components/
-│   │   │   │   ├── AboutHero.tsx
-│   │   │   │   ├── MaxPhoneAbout.tsx
-│   │   │   │   └── MaxPhoneServices.tsx
+│   │   │   │   ├── Banner
+│   │   │   │   │   ├── banner.client.tsx
+|   |   |   |   |   └── banner.server.tsx
+│   │   │   │   │  
+│   │   │   │   ├── BannerSlider
+│   │   │   │   │   ├── BannerSlider.client.tsx
+|   |   |   |   |   └── BannerSlider.server.tsx
+│   │   │   │   │  
+│   │   │   │   ├── BrandSlider
+│   │   │   │   │   ├── BrandSlider.client.tsx
+|   |   |   |   |   └── BrandSlider.server.tsx
+│   │   │   │   │  
+│   │   │   │   ├── CategoryGrid
+│   │   │   │   │   ├── CategoryGrid.client.tsx
+|   |   |   |   |   └── CategoryGrid.server.tsx
+│   │   │   │   │  
+│   │   │   │   ├── HeroSlider
+│   │   │   │   │   ├── HeroSlider.client.tsx
+|   |   |   |   |   └── HeroSlider.server.tsx
+│   │   │   │   │  
+│   │   │   │   ├── SecondBrandSlider
+│   │   │   │   │   ├── SecondBrandSlider.client.tsx
+|   |   |   |   |   └── SecondBrandSlider.server.tsx
+│   │   │   │   │  
+│   │   │   │   └── skeletons
+│   │   │   │      ├── BannerSkeleton.tsx
+│   │   │   │      ├── BlogCardSkeleton.tsx
+│   │   │   │      ├── CategoryGridSkeleton.tsx
+|   |   |   |      └── BannerSliderSkeleton.tsx  
+│   │   │   │   
 │   │   │   └── page.tsx
-│   │   │
-│   │   ├── blog/               # Blog Index
-│   │   │   ├── components/
-│   │   │   │   ├── BlogHero.tsx
-│   │   │   │   └── BlogTrending.tsx
-│   │   │   └── page.tsx
-│   │   │
-│   │   ├── contact/            # Contact Page
-│   │   │   ├── components/
-│   │   │   └── page.tsx
-│   │   │
-│   │   ├── search/             # Search Results
-│   │   │   └── page.tsx
-│   │   │
-│   │   ├── global.css          # Global styles
-│   │   ├── favicon.ico         # Site favicon
-│   │   ├── fonts.ts            # Font configuration
-│   │   └── layout.tsx          # Root layout
+.   .   .
+.   .   .
+│   │   ├── global.css
+│   │   ├── favicon.ico
+│   │   └── layout.tsx
 │   │
-│   ├── components/             # Reusable global components
-│   │   ├── ui/                 # Basic UI primitives
-│   │   │   ├── Breadcrumb.tsx
-│   │   │   ├── Button.tsx
-│   │   │   ├── Icon.tsx
-│   │   │   ├── Pagination.tsx
-│   │   │   └── SectionTitle.tsx
-│   │   │
-│   │   ├── plp/                # Product Listing Page components
-│   │   │   ├── CategorySlider.tsx
-│   │   │   ├── Filters.tsx
-│   │   │   └── SortBar.tsx
-│   │   │
-│   │   ├── BlogCard.tsx
-│   │   ├── Comments.tsx
-│   │   ├── BlogSlider.tsx
-│   │   ├── ProductCard.tsx
-│   │   ├── ProductSlider.tsx
-│   │   ├── MegaMenu.tsx
-│   │   ├── Footer.tsx
-│   │   └── Header.tsx
+│   ├── components/
+│   │   ├── ui/
 │   │
-│   ├── types/                  # TypeScript interfaces and types
-│   │   └── index.tsx
-│   │
-│   ├── hooks/                  # Custom React hooks
+│   ├── hooks/
 │   │    ├── useProductQuery.ts   
-│   │    ├── useCategoryQuery.ts 
+│   │    ├──  ....     
+│   │    └── useCategoryQuery.ts 
+│   │     
+│   ├── providers/
+│   │    └── QueryProvider.tsx    
 │   │
-│   ├── providers/              # Context Providers
-│   │    └── QueryProvider.tsx   # React Query Provider
-│   │
-│   └── lib/                    # Core utilities and API clients
+│   ├── middleware.ts
+│   │       
+│   └── lib/
 │       └── api/
-│           ├── core/           # Client initialization
-│           │   ├── apolloClient.ts       # GraphQL Client
-│           │   └── wooCommerceClient.ts  # REST API Client
+│           ├── core/
+│           │   ├── apolloClient.ts
+│           │   └── wooCommerceClient.ts
 │           │
-│           ├── graphql/        # GraphQL Operations
-│           │   ├── queries/    # Query definitions
-│           │   │   ├── blog/
-│           │   │   │   └── queries.ts
-│           │   │   └── home/
-│           │   │       └── queries.ts
-│           │   └── mutations/
-│           │       └── userMutations.ts
-│           │
-│           ├── services/       # Business logic / Service layer
-│           │   ├── homeService.ts
-│           │   ├── aboutService.ts
-│           │   ├── archiveService.ts
-│           │   ├── blogService.ts
-│           │   ├── pageService.ts
-│           │   ├── postService.ts
-│           │   ├── productService.ts
-│           │   └── searchService.ts     
-│           │
-│           └── mockData.ts     # Mock data for development/testing
+│           └── graphql/
 │
 └── README.md
+
